@@ -4,6 +4,7 @@ import "../../styles/Expense.css";
 import Card from "../UI/Card";
 import ExpensesFilter from "../UI/ExpenseFilter";
 import ExpensesList from "./ExpensesList";
+import ExpensesChart from "./ExpensesChart";
 
 const Expenses = (props) => {
   const [selectedDate, setSelectedDate] = useState("2019");
@@ -24,6 +25,7 @@ const Expenses = (props) => {
           onSelectDate={selectDate}
           selectedDate={selectedDate}
         />
+        <ExpensesChart expenses={expenses} />
         <ExpensesList expenses={expenses} />
       </Card>
     </div>
